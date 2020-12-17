@@ -7,24 +7,19 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./basic-things.component.css"],
 })
 export class BasicThingsComponent implements OnInit {
-  string1: string ;
-  string2: string = "bucks";
+  string1: string = '' ;
   isdisabled: boolean = true;
-  displayMessage = "Hello World !"
-  howManyMoney() {
-    return this.string1;
-  }
+  displayMessage = "Hello World !";
+
 
   constructor() {
-    setTimeout(() => {
-      this.isdisabled = false;
-    }, 2000);
+    // setTimeout(() => {
+    //   this.isdisabled = false;
+    // }, 2000);
+
   }
-  makeActive(){
-    this.displayMessage = "Message sent to the world"
-  }
-  onUpdateInput(event:Event){
-    this.string1 =(<HTMLInputElement>event.target).value;
+  makeActive() {
+    this.displayMessage = `Message sent to the world that you need ${this.string1} bucks .`;
   }
   ngOnInit() {}
 }
