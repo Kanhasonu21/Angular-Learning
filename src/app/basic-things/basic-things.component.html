@@ -3,4 +3,6 @@
   {{ howManyMoney() }} bucks soon.
 </p>
 <span>Wait for 2 second to get button active</span>
-<button class="btn btn-primary" [disabled]="isdisabled">Click Me</button>
+<hr>
+{{displayMessage}} <br>
+<button class="btn btn-primary" [disabled]="isdisabled"(click)="makeActive()" >Click Me</button>

@@ -8,15 +8,19 @@ import { Component, OnInit } from "@angular/core";
 export class BasicThingsComponent implements OnInit {
   string1: number = 100;
   string2: string = "bucks";
-  isdisabled: boolean = false;
+  isdisabled: boolean = true;
+  displayMessage = "Hello World !"
   howManyMoney() {
     return this.string1;
   }
 
   constructor() {
     setTimeout(() => {
-      this.isdisabled = true;
+      this.isdisabled = false;
     }, 2000);
+  }
+  makeActive(){
+    this.displayMessage = "Message sent to the world"
   }
   ngOnInit() {}
 }
