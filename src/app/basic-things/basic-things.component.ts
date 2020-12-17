@@ -1,3 +1,4 @@
+import { ClassGetter } from "@angular/compiler/src/output/output_ast";
 import { Component, OnInit } from "@angular/core";
 
 @Component({
@@ -6,7 +7,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./basic-things.component.css"],
 })
 export class BasicThingsComponent implements OnInit {
-  string1: number = 100;
+  string1: string ;
   string2: string = "bucks";
   isdisabled: boolean = true;
   displayMessage = "Hello World !"
@@ -21,6 +22,9 @@ export class BasicThingsComponent implements OnInit {
   }
   makeActive(){
     this.displayMessage = "Message sent to the world"
+  }
+  onUpdateInput(event:Event){
+    this.string1 =(<HTMLInputElement>event.target).value;
   }
   ngOnInit() {}
 }

@@ -1,8 +1,29 @@
-<p>
-  I've no money. Please give me {{ string1 }} {{ string2 }} . I will give
-  {{ howManyMoney() }} bucks soon.
-</p>
-<span>Wait for 2 second to get button active</span>
-<hr>
-{{displayMessage}} <br>
-<button class="btn btn-primary" [disabled]="isdisabled"(click)="makeActive()" >Click Me</button>
+<div class="container">
+  <div class="row">
+    <div class="input-field row s6">
+      <input
+        type="text"
+        id="text"
+        class="form-control"
+        (input)="onUpdateInput($event)"
+      />
+      <label for="text">Enter rupee</label>
+    </div>
+    <div class="row">
+      <p>
+        I've no money. Please give me {{ string1 }} {{ string2 }} . I will give
+        {{ howManyMoney() }} bucks soon.
+      </p>
+      <span>Wait for 2 second to get button active</span>
+
+      {{ displayMessage }} <br />
+    </div>
+    <button
+      class="btn btn-primary"
+      [disabled]="isdisabled"
+      (click)="makeActive()"
+    >
+      Click Me
+    </button>
+  </div>
+</div>
